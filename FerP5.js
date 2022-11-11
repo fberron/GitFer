@@ -21,6 +21,9 @@ function draw() {
     fill(255)
 
     for(var i = 0; i < points.length; i++){
-      ellipse(points[i].x, points[i].y, 5)
+      var angle = map(noise(points[i].x, points[i].y), 0, 1, 0, 720)
+      points[i].add(createVector(cos(angle),sin(angle)))
+
+      ellipse(points[i].x, points[i].y, 1)
     }
   }
