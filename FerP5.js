@@ -1,11 +1,12 @@
 var points = []
-
+var mult = 0.005
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
   background(30);
+  noiseDetail(1)
 
-  var density = 50;
+  var density = 40;
   var space = width/density;
 
   for(var x=0; x<width; x+=space){
@@ -21,7 +22,7 @@ function draw() {
     fill(255)
 
     for(var i = 0; i < points.length; i++){
-      var angle = map(noise(points[i].x, points[i].y), 0, 1, 0, 720)
+      var angle = map(noise(points[i].x * mult, points[i].y * mult), 0, 1, 0, 720)
       points[i].add(createVector(cos(angle),sin(angle)))
 
       ellipse(points[i].x, points[i].y, 1)
