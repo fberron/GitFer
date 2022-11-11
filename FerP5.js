@@ -1,5 +1,5 @@
 var points = []
-var mult = 0.005
+var mult = 0.001
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
@@ -12,7 +12,7 @@ function setup() {
 
   for(var x=0; x<width; x+=space){
     for(var y = 0; y < height; y += space){
-       var p = createVector(x, y)
+       var p = createVector(x + random(-10,10), y + random(-10,10))
        points.push(p)
     }
   }
