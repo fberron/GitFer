@@ -18,7 +18,9 @@ function setup() {
 
 function draw() {
     noStroke()
-    FileList(255)
+    fill(255)
 
-    
+    for(var i = 0; i < points.length; i++){
+      ellipse(points[i].x, points[i].y, 5)
+    }
   }
