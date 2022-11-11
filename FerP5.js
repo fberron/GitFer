@@ -1,12 +1,24 @@
-let walker;
+var points = []
+
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
-  walker = new Walker(windowWidth/2,windowHeight/2);
-  background(0);
+  background(30);
+
+  var density = 50;
+  var space = width/density;
+
+  for(var x=0; x<width; x+=space){
+    for(var y = 0; y < height; y += space){
+       var p = createVector(x, y)
+       points.push(p)
+    }
+  }
 }
 
 function draw() {
-  walker.update();
-  walker.show();
+    noStroke()
+    FileList(255)
+
+    
   }
