@@ -4,6 +4,7 @@ var mult = 0.005
 function setup() {
   createCanvas(windowWidth,windowHeight);
   background(30);
+  angleMode(DEGREES)
   noiseDetail(1)
 
   var density = 40;
