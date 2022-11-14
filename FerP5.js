@@ -7,7 +7,7 @@ function setup() {
   angleMode(DEGREES)
   noiseDetail(1)
 
-  var density = 30;
+  var density = 120;
   var space = width/density;
 
   for(var x=0; x<width; x+=space){
